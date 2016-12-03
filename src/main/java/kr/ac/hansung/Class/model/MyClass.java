@@ -73,6 +73,6 @@ public class MyClass {
 		this.grades = grades;
 	}
 	public String toString() {
-		return "수강신청 과목 [ 연도=" + year + ", 과목코드=" + code + ", 과목명=" + title + ", 구분=" + type+ ", 학점=" + grades+"]";
+		return "과목 [ 연도=" + year + ", 과목코드=" + code + ", 과목명=" + title + ", 구분=" + type+ ", 학점=" + grades+"]";
 	}
 }

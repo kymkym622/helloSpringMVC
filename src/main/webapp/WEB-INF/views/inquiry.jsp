@@ -10,7 +10,7 @@
 <body>
 	<c:forEach var="Schedule" items="${Schedules}">
 		<p>
-			<c:out value="${Schedule}">
+			<c:out value="수강신청 ${Schedule}">
 			</c:out>
 		</p>
 	</c:forEach>
