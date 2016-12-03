@@ -36,26 +36,24 @@ public class ClassDAO {
 		return jdbcTemplateObject.queryForObject(sqlStatement,new Object[]{},Integer.class);		
 	}
 	
-	//querying and returning a single object
-	public MyClass getClass(String title){
-		String sqlStatement = "select * from class where title=?";
-		return jdbcTemplateObject.queryForObject(sqlStatement,new Object[]{ title } ,new ClassMapper());
-	}
+
 	
 	public List<MyClass> getClasses(){
 		String sqlStatement = "select * from class ";
 		return jdbcTemplateObject.query(sqlStatement,new ClassMapper());
 	}
+	
 	public List<MyClass> getSchedule(){
 		String sqlStatement = "select * from class where year=2017";
 		return jdbcTemplateObject.query(sqlStatement,new ClassMapper());
 	}
 	
-	//querying and returning a multiple object
+
 	public List<MyClass> getsemesterClasses(int s,int n){
 		String sqlStatement = "select * from class where year=?  and semester =?";
 		return jdbcTemplateObject.query(sqlStatement,new Object[]{s,n},new ClassMapper());
 	}
+	
 	public boolean insert(MyClass myclass){
 		int year = 2017;
 		int semester = 1;
