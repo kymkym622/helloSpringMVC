@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.ac.hansung.Class.model.MyClass;
 import kr.ac.hansung.Class.service.ClassService;
@@ -53,7 +54,30 @@ public class ClassController {
 	public String Application(Model model){
 		model.addAttribute(new MyClass());
 		return "application";
-	}	
+	}
+	
+	@RequestMapping("/semester")
+	public String Semester(Model model,@RequestParam(value="year")int year){		
+		if(year==20111){
+			model.addAttribute("semesters",classService.getsemester(2011, 1));
+		}
+		else if(year==20112){
+			model.addAttribute("semesters",classService.getsemester(2011, 1));
+		}
+		else if(year==20151){
+			model.addAttribute("semesters",classService.getsemester(2011, 1));
+		}
+		else if(year==20152){
+			model.addAttribute("semesters",classService.getsemester(2011, 1));
+		}
+		else if(year==20162){
+			model.addAttribute("semesters",classService.getsemester(2011, 1));
+		}
+		else if(year==20162){
+			model.addAttribute("semesters",classService.getsemester(2011, 1));
+		}
+		return "semester";
+	}
 	
 	@RequestMapping("/docreate")
 	public String application_result(Model model,MyClass myClass){		

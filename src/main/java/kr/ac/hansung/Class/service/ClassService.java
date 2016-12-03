@@ -25,6 +25,9 @@ public class ClassService {
 	public int getGrades(){		
 		return classDAO.getGrade();		
 	}
+	public List<MyClass> getsemester(int x,int y){		
+		return classDAO. getsemesterClasses(x,y);		
+	}
 	public List<MyClass> getcurrent(){		
 		return classDAO.getClasses();		
 	}

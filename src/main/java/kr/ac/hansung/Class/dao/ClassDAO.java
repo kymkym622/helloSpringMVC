@@ -53,7 +53,7 @@ public class ClassDAO {
 	
 	//querying and returning a multiple object
 	public List<MyClass> getsemesterClasses(int s,int n){
-		String sqlStatement = "select * from class where year=?  in where semester =?";
+		String sqlStatement = "select * from class where year=?  and semester =?";
 		return jdbcTemplateObject.query(sqlStatement,new Object[]{s,n},new ClassMapper());
 	}
 	public boolean insert(MyClass myclass){
