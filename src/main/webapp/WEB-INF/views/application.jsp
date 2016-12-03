@@ -15,7 +15,7 @@ href="${pageContext.request.contextPath}/resources/css/main.css">
 	<form method="get" action="${pageContext.request.contextPath}/docreate">
 		<table class="formtable">
 			<tr>
-				<td class="label">과목명:</td>
+				<td class="label">과목:</td>
 				<td class="control"><input name="title" type="text" />
 				</td>
 				
@@ -37,7 +37,7 @@ href="${pageContext.request.contextPath}/resources/css/main.css">
 			</tr>
 			<tr>
 				<td></td>
-				<td><input value="Create offer" type="submit" /></td>
+				<td><input value="수강신청" type="submit" /></td>
 			</tr>
 		</table>
 	</form>
